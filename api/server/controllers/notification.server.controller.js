@@ -16,12 +16,15 @@ module.exports = {
 
     var sender = new gcm.Sender(secrets.fcm);
 
+    var username = req.body.commits.author.username || 'Unknown User';
+    var message = req.body.commits.message;
+
     // Prepare a message to be sent
     var message = new gcm.Message({
         notification: {
-          title: "New commit on Github Repo: RIL",
+          title: `New commit made by ${username}`,
           icon: "ic_launcher",
-          body: "Click to see the latest commit"
+          body: `Push message: ${message}. Click to see this commit.`
         }
     });
 

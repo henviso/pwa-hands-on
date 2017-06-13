@@ -8,7 +8,7 @@
   var commitContainer = [".first", ".second", ".third", ".fourth", ".fifth"];
   var posData = ["first", "second", "third", "fourth", "fifth"];
 
-  const token = "2bca36136db9478e3f73d092d312ffcc06005389";
+  const token = "b8eae22e495956e5ebba4c51c7a531fd7be9881d";
 
   // Check that localStorage is both supported and available
   function storageAvailable(type) {
