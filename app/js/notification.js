@@ -125,11 +125,12 @@
   });
 
   function saveSubscriptionID(subscription) {
+    console.log('subscriptionn', subscription);
     var subscription_id = subscription.endpoint.split('gcm/send/')[1];
 
     console.log("Subscription ID", subscription_id);
 
-    fetch('http://localhost:3333/api/users', {
+    fetch('https://7789b4f0.ngrok.io/api/users', {
       method: 'post',
       headers: {
         'Accept': 'application/json',
@@ -142,7 +143,7 @@
   function deleteSubscriptionID(subscription) {
     var subscription_id = subscription.endpoint.split('gcm/send/')[1];
 
-    fetch('http://localhost:3333/api/user/' + subscription_id, {
+    fetch('https://7789b4f0.ngrok.io/api/user/' + subscription_id, {
       method: 'delete',
       headers: {
         'Accept': 'application/json',

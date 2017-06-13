@@ -8,7 +8,7 @@
   var commitContainer = [".first", ".second", ".third", ".fourth", ".fifth"];
   var posData = ["first", "second", "third", "fourth", "fifth"];
 
-  const token = "b705fe52a21d8eeba8cf4c9690509e2bf485177b";
+  const token = "2bca36136db9478e3f73d092d312ffcc06005389";
 
   // Check that localStorage is both supported and available
   function storageAvailable(type) {
@@ -24,7 +24,7 @@
 
   // Get Commit Data from Github API
   function fetchCommits() {
-    var url = `https://api.github.com/repos/unicodeveloper/resources-i-like/commits?access_token=${token}`;
+    var url = `https://api.github.com/repos/henviso/pwa-hands-on/commits?access_token=${token}`;
 
     fetch(url)
       .then(function(fetchResponse) {
